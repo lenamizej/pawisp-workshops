@@ -171,6 +171,26 @@
                 </tfoot>
             </table>
 
+        
+            <button type="button" id="otworz-pakowanie">
+                Otwórz listę rzeczy do spakowania
+            </button>
+
+            <dialog id="pakowanie" aria-labelledby="tytul-pakowania">
+                <h3 id="tytul-pakowania">Co spakować?</h3>
+
+                <ul>
+                    <li>Dokument tożsamości</li>
+                    <li>Butelka wody</li>
+                    <li>Wygodne buty</li>
+                    <li>Powerbank</li>
+                </ul>
+
+                <button type="button" id="zamknij-pakowanie">
+                    Zamknij
+                </button>
+            </dialog>
+
         </section>
     
         <section id="faq">
@@ -241,6 +261,26 @@
 
         <p><a href="#gora">Wróć na górę</a></p>
     </footer>
+
+
+    <script>
+        const przyciskOtworz = document.getElementById("otworz-pakowanie");
+        const przyciskZamknij = document.getElementById("zamknij-pakowanie");
+        const oknoPakowania = document.getElementById("pakowanie");
+
+        przyciskOtworz.addEventListener("click", function () {
+            oknoPakowania.showModal();
+        });
+
+        przyciskZamknij.addEventListener("click", function () {
+            oknoPakowania.close();
+            przyciskOtworz.focus();
+        });
+
+        oknoPakowania.addEventListener("close", function () {
+            przyciskOtworz.focus();
+        });
+    </script>
 
 </body>
 </html>

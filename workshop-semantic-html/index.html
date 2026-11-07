@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje podróże - blog podróżniczy</title>
 </head>
-<body>
+<body id="gora">
 
     <nav>
         <a href="#o-mnie">O mnie</a>
@@ -135,6 +135,47 @@
         <p><strong>Miejsce:</strong> Aula 101</p>
         <p>Spotkanie dla osób uczących się frameworków frontendowych.</p>
     </article>
+
+
+    <footer>
+        <p>Kontakt: <a href="mailto:kontakt@example.com">kontakt@example.com</a></p>
+
+        <h2>Napisz do mnie</h2>
+
+        <form>
+            <fieldset>
+                <legend>Dane kontaktowe</legend>
+
+                <p>
+                    <label for="imie">Imię</label>
+                    <input type="text" id="imie" name="imie">
+                </p>
+
+                <p>
+                    <label for="email">Adres e-mail</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Wiadomość</legend>
+
+                <p>
+                    <label for="temat">Temat</label>
+                    <input type="text" id="temat" name="temat">
+                </p>
+
+                <p>
+                    <label for="wiadomosc">Treść wiadomości</label>
+                    <textarea id="wiadomosc" name="wiadomosc" required></textarea>
+                </p>
+            </fieldset>
+
+            <button type="submit">Wyślij wiadomość</button>
+        </form>
+
+        <p><a href="#gora">Wróć na górę</a></p>
+    </footer>
 
 </body>
 </html>
